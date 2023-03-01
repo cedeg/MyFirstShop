@@ -1,0 +1,76 @@
+@import '../../node_modules/reset-css/sass/reset';
+
+@font-face {
+  font-family: 'Climate Crisis';
+  src: url(../fonts/Climate_Crisis/ClimateCrisis-Regular-VariableFont_YEAR.ttf) format('opentype');
+}
+
+// VARIABLES :
+
+$bigSize: 4em;
+$largeSize: $bigSize / 2;
+$primaryColor: #0066CC;
+$secondColor: #fff;
+$linkPadding: 0.2em;
+$borderRadius: 3px;
+$borderSize: $borderRadius;
+
+// ELEMENTS
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  font-size: $bigSize;
+  font-family: 'Climate Crisis', sans-serif;
+  color: $primaryColor;
+}
+
+a {
+  text-decoration: none;
+  color: $primaryColor;
+}
+
+// HEADER
+
+.header {
+  background-image: url("../media/adidas-banner01.png");
+
+  &__title {
+    text-align: center;
+    padding: 0.5em 0;
+  }
+
+  &__nav {
+    padding: 0.5em 0 1em;
+
+    &__list {
+      display: flex;
+      justify-content: space-around;
+
+      &__item {
+        &__link {
+          font-size: $largeSize;
+          font-family: 'Climate Crisis', sans-serif;
+          color: $primaryColor;
+          border: transparent $borderSize solid;
+          border-radius: $borderRadius;
+          padding: $linkPadding;
+
+        }
+
+        &__link:hover {
+          border-color: $secondColor;
+          color: $secondColor;
+          background-color: $primaryColor;
+
+        }
+      }
+    }
+  }
+}
