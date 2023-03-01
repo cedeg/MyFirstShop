@@ -45,11 +45,36 @@ a {
   color: $primaryColor;
 }
 
+.hidden {
+  display: none;
+}
+
 // HEADER
 
 .header {
   background-image: url("../media/adidas-banner01.png");
   border-bottom: $primaryBorder;
+
+  &__basket {
+    &__container {
+      color: $primaryColor;
+      font-size: 1.5em;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      span {
+        padding-right: 0.2em;
+        font-size: 1.5em;
+        padding-bottom: 6px;
+      }
+
+      p {
+
+      }
+    }
+  }
+
 
   &__wrapper {
 
@@ -97,6 +122,16 @@ a {
 
   }
 
+  &__image-section {
+
+    right: 1px;
+
+
+    img {
+      width: 100%
+    }
+  }
+
   &__container {
 
     &__text-section {
@@ -111,15 +146,6 @@ a {
       }
     }
 
-    &__image-section {
-
-      right: 1px;
-
-
-      img {
-        width: 100%
-      }
-    }
 
     &__list {
       display: flex;
@@ -148,7 +174,7 @@ a {
           flex-direction: column;
 
           p {
-            
+
             font-size: $largeSize;
           }
 
