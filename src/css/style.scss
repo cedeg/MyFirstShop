@@ -1,4 +1,4 @@
-@import '../../node_modules/reset-css/sass/reset';
+@import '../../node_modules/normalize.css/normalize.css';
 
 @font-face {
   font-family: 'Climate Crisis';
@@ -6,14 +6,16 @@
 }
 
 // VARIABLES :
-
+// https://coolors.co/palette/ffbe0b-fb5607-ff006e-8338ec-3a86ff
 $bigSize: 4em;
 $largeSize: $bigSize / 2;
-$primaryColor: #0066CC;
+$primaryColor: #3a86ff;
 $secondColor: #fff;
+$thirdColor: #FB5607;
 $linkPadding: 0.2em;
-$borderRadius: 3px;
-$borderSize: $borderRadius;
+$borderRadius: 10px;
+$borderSize: 3px;
+$primaryBorder: $primaryColor $borderSize solid;
 
 // ELEMENTS
 
@@ -26,6 +28,7 @@ ul {
 }
 
 h1 {
+  margin: 0;
   font-size: $bigSize;
   font-family: 'Climate Crisis', sans-serif;
   color: $primaryColor;
@@ -36,10 +39,21 @@ a {
   color: $primaryColor;
 }
 
+.sub-title {
+  font-size: $largeSize;
+  font-family: 'Climate Crisis', sans-serif;
+  color: $primaryColor;
+}
+
 // HEADER
 
 .header {
   background-image: url("../media/adidas-banner01.png");
+  border-bottom: $primaryBorder;
+
+  &__wrapper {
+
+  }
 
   &__title {
     text-align: center;
@@ -56,6 +70,129 @@ a {
       &__item {
         &__link {
           font-size: $largeSize;
+          font-family: 'Climate Crisis', sans-serif;
+          color: $primaryColor;
+          border: transparent $borderSize solid;
+          border-radius: $borderRadius;
+          padding: $linkPadding;
+
+        }
+
+        &__link:hover {
+          border-color: $secondColor;
+          color: $secondColor;
+          background-color: $primaryColor;
+
+        }
+      }
+    }
+  }
+}
+
+// MAIN
+
+.main {
+
+  &__wrapper {
+
+  }
+
+  &__container {
+
+    &__text-section {
+      padding: $bigSize;
+
+      &__title {
+        padding-bottom: 0.5em;
+      }
+
+      &__sub-title {
+        padding-bottom: 0.5em;
+      }
+    }
+
+    &__image-section {
+
+      right: 1px;
+
+
+      img {
+        width: 100%
+      }
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: $largeSize;
+      padding: $bigSize 0;
+
+      &__item {
+        text-align: center;
+
+
+        &__image-section {
+
+          padding: $largeSize 0;
+
+          img {
+            height: $largeSize * 20;
+            width: auto;
+          }
+        }
+
+        &__text-section {
+          padding: $largeSize * 3;
+          display: flex;
+          flex-direction: column;
+
+          p {
+            
+            font-size: $largeSize;
+          }
+
+
+          a {
+            padding: $largeSize 0;
+            margin: 0 $largeSize * 2;
+            font-size: $largeSize;
+            border: $primaryBorder;
+            font-weight: bold;
+            border-radius: $borderRadius;
+
+
+          }
+
+          a:hover {
+            background-color: $thirdColor;
+          }
+        }
+
+      }
+    }
+  }
+
+}
+
+// FOOTER
+
+.footer {
+
+  &__wrapper {
+
+  }
+
+  &__nav {
+    padding: 0.5em 0 1em;
+
+    &__list {
+      display: flex;
+      justify-content: space-around;
+
+      &__item {
+        &__link {
+          font-size: $largeSize / 2;
           font-family: 'Climate Crisis', sans-serif;
           color: $primaryColor;
           border: transparent $borderSize solid;
