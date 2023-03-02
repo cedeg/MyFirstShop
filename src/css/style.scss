@@ -60,7 +60,9 @@ a {
     right: 1px;
     left: 1px;
     top: 1px;
-    margin-top: 1em
+    padding-top: 1em;
+    background-color: $thirdColor;
+    opacity: 0.7;
   ;
     &__container {
       color: $primaryColor;
