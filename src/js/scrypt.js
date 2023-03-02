@@ -14,7 +14,7 @@ addToBasket.forEach(e => e.addEventListener('click', function (e) {
         getBasketCount.classList.remove('hidden');
         let str = getBasketCount.innerHTML
         str = str.split(' ')
-        getBasketCount.innerHTML = totalPrice + ' ' + str[1];
+        getBasketCount.innerHTML = totalPrice + ' ' + str[1] + ' ' +str[2];
     }
 
     console.log(totalPrice);
